@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<%- include("header") -%>
+    <div class="box" id="heading">
+      <h1> <%= listTitle%></h1>
+    </div>
+
+    <div class="box" >
+
+      <!-- <%for(var i = 0; i < newTask.length ; i++){%>
+        <div class="item">
+          <input type="checkbox">
+          <p><%= newTask[i].name %></p>
+        </div>
+      <%}%> -->
+      <%newTask.forEach(function(item){%>
+        <form action="/delete" method="post">
+          <div class="item" >
+            <input type="checkbox" name = "checkbox" value="<%=item._id%>"onchange="this.form.submit()">
+            <p><%= item.name %></p>
+          </div>
+          <input type="hidden" name="listName" value ="<%= listTitle%>"></input>
+        </form>
+      <%})%>
+      <form action="/" method="post">
+        <!-- <div class="item" > -->
+        <p>Enter Todays Task!</p>
+        <p><input type="text" name="newTask" placeholder="New Item" autocomplete="off"></p>
+        <p><button type="submit" name="list" value=<%= listTitle %>>+</button></p>
+        <!-- </div> -->
+      </form>
+
+    </div>
+
+<%- include("footer") -%>

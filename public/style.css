@@ -1,0 +1,24 @@
+.full{
+  background-color: #dfdfe1;
+  vertical-align: middle;
+}
+
+.container1{
+  /* background-color: #5ce1e6; */
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+
+.box1{
+  background-color: #5ce1e6;
+  color: black;
+  top:50%;
+  height: auto;
+  width: 30%;
+  border: 5px solid #ffde59;
+  padding: 20px;
+}

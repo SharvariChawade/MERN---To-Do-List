@@ -1,0 +1,14 @@
+<% /*if(day === "Tuesday"){*/%>
+  <!--<h1 style="color: blue">It's a <%= day%>!</h1>-->
+<%/*}else{*/%>
+<!--<h1 style="color: red">It's a <%= day%>!</h1>-->
+<%/*}*/%>
+
+<% if(newTask ===""){%>
+  <ul>
+    <li><%= newTask %></li>
+  </ul>
+<%}%>
+
+
+<h1><%= newTask%></h1>
